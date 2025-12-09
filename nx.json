@@ -31,7 +31,7 @@
       "options": {
         "targetName": "test"
       },
-      "exclude": ["apps/market-hub-e2e/**/*"]
+      "exclude": []
     }
   ]
 }
