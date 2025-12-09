@@ -1,0 +1,17 @@
+{
+  "name": "market-hub-e2e",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "implicitDependencies": ["market-hub"],
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{e2eProjectRoot}"],
+      "options": {
+        "jestConfig": "apps/market-hub-e2e/jest.config.cts",
+        "passWithNoTests": true
+      },
+      "dependsOn": ["market-hub:build", "market-hub:serve"]
+    }
+  }
+}
